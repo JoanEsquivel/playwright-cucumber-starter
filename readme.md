@@ -14,6 +14,7 @@ The goal of this project is to setup a baseline project to start using Playwrigh
 1. Create a new directory for the project.
 2. Initialize a new Node.js project using ```npm init -f```.
 3. Install Playwright using ```npm init playwright@latest```.
-¿
+4. Install Cucumber using ```npm install -D @cucumber/cucumber```.
+5. Install ts node using ```npm install -D ts-node```.
 
 
