@@ -10,7 +10,8 @@ import {
   let page: Page;
 
   Given('A web browser is at the saucelabs login page', async function () {
-    browser = await chromium.launch({headless: false});
+    // Add this to the launch options to run the tests in headless mode: {headless: false}
+    browser = await chromium.launch();
     page = await browser.newPage();
     await page.goto('https://www.saucedemo.com/');
   });
