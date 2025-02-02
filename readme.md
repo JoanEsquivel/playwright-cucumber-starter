@@ -186,3 +186,10 @@ import {
 3 steps (3 passed)
 
 ```
+14. Let's modify the playwright.yml file to run the tests with the new feature file:
+
+playwright.yml
+```
+ - name: Run Playwright tests
+      run: npm run cucumber
+```

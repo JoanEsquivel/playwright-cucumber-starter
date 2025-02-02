@@ -23,5 +23,6 @@ import {
 
   Then('the url will contains the inventory subdirectory', async function () {
     await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
+    await browser.close();
   });
  
