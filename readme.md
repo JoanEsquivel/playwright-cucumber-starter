@@ -130,3 +130,59 @@ Also make sure to update the package.json script to use the new config file:
 "cucumber": "cucumber-js --config config/cucumber.js"
 ```
 
+11. Let's create a more real scenario for the login feature: 
+
+login.feature
+```
+Feature: Login
+     Feature Login page will work depending on the user credentials.
+
+    Scenario: Sucess Login
+    Given A web browser is at the saucelabs login page
+    When A user enters the username "standard_user", the password "secret_sauce", and clicks on the login button
+    Then the url will contains the inventory subdirectory
+```
+
+login.ts
+```
+import {
+    Given,
+    When,
+    Then,
+  } from "@cucumber/cucumber";
+
+  import { Page, Browser, chromium, expect } from "@playwright/test";
+
+  let browser: Browser;
+  let page: Page;
+
+  Given('A web browser is at the saucelabs login page', async function () {
+    browser = await chromium.launch({headless: false});
+    page = await browser.newPage();
+    await page.goto('https://www.saucedemo.com/');
+  });
+
+  When('A user enters the username {string}, the password {string}, and clicks on the login button', async function (username: string, password: string) {
+    await page.fill('input[data-test="username"]', username);
+    await page.fill('input[data-test="password"]', password);
+    await page.click('input[data-test="login-button"]');
+  }); 
+
+  Then('the url will contains the inventory subdirectory', async function () {
+    await expect(page).toHaveURL('https://www.saucedemo.com/inventory.html');
+  });
+ 
+```
+
+12. Run the tests using ```npm run cucumber```
+
+13. The output should be:
+```
+> cucumber-js --config config/cucumber.js
+
+...
+
+1 scenario (1 passed)
+3 steps (3 passed)
+
+```
