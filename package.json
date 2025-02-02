@@ -1,0 +1,17 @@
+{
+  "name": "playwright-cucumber-starter",
+  "version": "1.0.0",
+  "description": "The goal of this project is to setup a baseline project to start using Playwright with Cucumber. I will describe the steps to setup the project and the steps to run the tests. Also some guidelines to follow to make the project more maintainable.",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.0"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^11.2.0"
+  }
+}
