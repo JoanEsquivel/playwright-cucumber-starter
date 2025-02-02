@@ -4,7 +4,7 @@
   "description": "The goal of this project is to setup a baseline project to start using Playwright with Cucumber. I will describe the steps to setup the project and the steps to run the tests. Also some guidelines to follow to make the project more maintainable.",
   "main": "index.js",
   "scripts": {
-    "cucumber": "cucumber-js test"
+    "cucumber": "cucumber-js --config config/cucumber.js"
   },
   "keywords": [],
   "author": "",

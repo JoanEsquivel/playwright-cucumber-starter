@@ -101,5 +101,32 @@ The goal of this project is to setup a baseline project to start using Playwrigh
 ]
 ```
 
+10. I moved the cucumber.json file to the config folder, and not it is a js file.
+Please check the code structure from json to JS: 
+```
+module.exports ={
+    default: {
+        paths: [
+            "src/tests/features"
+        ], 
+        dryRun: false,
+        formatOptions: {
+            colorsEnabled: true,
+            snippetInterface: "async-await"
+        },
+        require: [
+            "src/tests/step-definitions/*.ts"
+        ],
+        requireModule: [
+            "ts-node/register"
+        ]
+    }
+}
 
+```
+
+Also make sure to update the package.json script to use the new config file:
+```
+"cucumber": "cucumber-js --config config/cucumber.js"
+```
 
