@@ -2,6 +2,8 @@
 # Playwright with Cucumber
 The goal of this project is to setup a baseline project to start using Playwright with Cucumber. I will describe the steps to setup the project and the steps to run the tests. Also some guidelines to follow to make the project more maintainable.
 
+I took the base idea from: https://github.com/adamcegielka/playwright-cucumber-bdd-typescript
+
 ## Prerequisites
 - Node.js
 - Visual Studio Code / Cursor / Webstorm / IntelliJ IDEA
