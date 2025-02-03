@@ -195,3 +195,13 @@ playwright.yml
  - name: Run Playwright tests
       run: npm run cucumber
 ```
+
+15. Let's add some native reports to the project:
+config/cucumber.js
+```
+format: [
+    "progress-bar",
+    "summary",
+    "json:reports/cucumber-report.json",
+    "html:reports/cucumber-report.html"
+]
